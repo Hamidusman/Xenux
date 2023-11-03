@@ -2,7 +2,8 @@
 *{
     margin:0;
     overflow-x: hidden;
-    color: white
+    color: #0c0c0c;
+    font-family: 'Ubuntu', sans-serif;
 }
 a{
     text-decoration: none;
@@ -12,7 +13,8 @@ a{
 
   :root{
     --color-primary: #47be88;
-    --color-secondery: #134534;
+    /* --color-secondery: #134534; */
+    background-image: linear-gradient(180deg, #1a759f, #168aad);
   }
 /* header */
 .nav-container{
@@ -22,10 +24,9 @@ a{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-secondery);
+    background-color: #184e77;
     color: white;
-    position: fixed;
-    
+    position: fixed;  
 
 }
 .header-container .logo, .navbar{
@@ -42,7 +43,13 @@ ul{
     margin-left: 40px;
     font-size: 30px;
 }
+
+li, a{
+    color: #e7e5e5;
+}
+
 li{
+    color: #0c0c0c;
     margin: 15px;
     list-style: none;
     font-size: 18;
