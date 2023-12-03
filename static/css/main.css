@@ -1,20 +1,23 @@
 
 *{
     margin:0;
-    overflow-x: hidden;
-    color: white
+    overflow-x: hidden; 
 }
 a{
     text-decoration: none;
+
     
 }
-
-
+ 
   :root{
-    --color-primary: #47be88;
-    --color-secondery: #134534;
+    --color-primary: #cfab17;
+    --color-secondery: #eaf0f6;
   }
 /* header */
+
+.nav-link{
+    color: black;
+}
 .nav-container{
     height: 75px;
     width: 100vw;
@@ -22,8 +25,7 @@ a{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-secondery);
-    color: white;
+    background-color: var(--color-primary); 
     position: fixed;
     
 
@@ -45,7 +47,7 @@ ul{
 li{
     margin: 15px;
     list-style: none;
-    font-size: 18;
+    font-size: 22;
 }
 
 li:hover{
@@ -70,7 +72,7 @@ li, a:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--color-primary);
+    color: ;
     height: 100vh;
     background-color:var(--color-secondery);
     width: 100vw
@@ -83,29 +85,32 @@ li, a:hover{
     margin-right: 50px
 }
 
-.hero-text{
-    width: 500px;
+.hero-text{ 
     align-items: center;
     margin-left:50
 }
 
 
-.text{
-    margin-bottom: 30px;
-    margin-right: 80px;
+.text{ 
     font-size: 35;
+    margin-bottom: 5px; 
     
 }
 
 .pre-text{
-    margin-bottom: 5px;
-    margin-left: 170px;
+    margin-bottom: 5px; 
+    font-size: 16px;
+}
+
+.post-text{
+    font-size: 21;
+    margin-bottom: 5px; 
 }
 .sub{
     padding: 13px 22px;
     background-color: var(--color-primary);
     font-size: 15;
-    border-radius: 30px ;
+    border-radius: 10px ;
     border-color: var(--color-primary);
     transition: 1s;
      
@@ -127,7 +132,7 @@ li, a:hover{
 /* ABOUT SECTION */
 
 .about{
-    background-color:rgb(230, 249, 238);
+    background-color:var();
     width: 100vw;
     height: 500px;
 }
@@ -146,9 +151,9 @@ li, a:hover{
     margin-top: 15px;
 }
 .description{
-    font-size: 22;
+    font-size: 17;
     letter-spacing: 0.08;
-    width: 50%
+    width: 30%
 }
 
 .description, .about-image{
@@ -268,3 +273,21 @@ li, a:hover{
     color: var(--color-secondery)
 }
 /* END OF DEVELOPERS SECTION */
+
+
+
+
+
+
+
+
+/* login/register */
+.login-img{
+    width: 50%;
+    height: 100vh;
+}
+.login-page{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
