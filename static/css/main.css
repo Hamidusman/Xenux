@@ -2,13 +2,18 @@
 *{
     margin:0;
     overflow-x: hidden; 
+    font-family: inter
 }
 a{
     text-decoration: none;
+    
 
     
 }
- 
+
+main{
+}
+
   :root{
     --color-primary: #cfab17;
     --color-secondery: #eaf0f6;
@@ -41,7 +46,7 @@ ul{
 }
 
 .logo{
-    margin-left: 40px;
+    margin-left: 25px;
     font-size: 30px;
 }
 li{
@@ -59,6 +64,13 @@ li, a:hover{
     transition: .5s;
 
 }
+
+.login-register{
+    margin-right: 25px;
+    padding: 10px 25px;
+    border-radius: 30px;
+}
+
 /* header end*/
 
 
@@ -152,7 +164,7 @@ li, a:hover{
 }
 .description{
     font-size: 17;
-    letter-spacing: 0.08;
+    letter-spacing: 0.03;
     width: 30%
 }
 
@@ -302,7 +314,7 @@ li, a:hover{
 
 .form-container{
     width: auto;
-    height: 80%; 
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -323,16 +335,17 @@ form p{
     color: grey ; 
 }
 
-input, p{
-    margin-bottom:5px
+form input, p{
+    margin-top: 5;
 
 }
-input{
+form input{
 
     border: unset;
     background-color: transparent;
     border-bottom: 3px solid #cfab17;
     width:  370px;
+
     
 }
 
@@ -346,4 +359,50 @@ input{
 .auth-submit:hover{
     background-color: var(--color-primary);
     transition: .4s;
+}
+
+/* login-reg end */
+
+
+/* work-form page */
+
+.work-page-form{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.output{
+    width: 15%;
+    height: auto;
+}
+
+.form-frame{
+    width: 25%; 
+    display: flex;
+    flex-direction: column; 
+}
+
+.track{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.phase{
+    display: flex; 
+    margin-top: 25px; 
+}
+
+
+
+.icon{
+    font-size: 25;   
+    margin: 0 10px
+}
+
+.form-link{
+    color: black;
+    font-size: 20;
 }
