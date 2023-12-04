@@ -47,7 +47,7 @@ ul{
 li{
     margin: 15px;
     list-style: none;
-    font-size: 22;
+    font-size: 18;
 }
 
 li:hover{
@@ -290,4 +290,60 @@ li, a:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.login-form{
+    width: 50%;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container{
+    width: auto;
+    height: 80%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.heading{
+    margin-bottom: 10px;
+}
+
+.header{
+    font-size: 25;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+form p{
+    color: grey ; 
+}
+
+input, p{
+    margin-bottom:5px
+
+}
+input{
+
+    border: unset;
+    background-color: transparent;
+    border-bottom: 3px solid #cfab17;
+    width:  370px;
+    
+}
+
+.auth-submit{
+    margin-top: 15px;
+    border-width: 3px;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.auth-submit:hover{
+    background-color: var(--color-primary);
+    transition: .4s;
 }
