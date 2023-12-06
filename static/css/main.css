@@ -1,15 +1,15 @@
 
-*{
-    margin:0;
-    overflow-x: hidden; 
-    font-family: inter
-}
-a{
-    text-decoration: none;
-    
 
-    
-}
+
+
+
+
+
+
+
+
+
+
 
 main{
 }
@@ -19,25 +19,6 @@ main{
     --color-secondery: #eaf0f6;
   }
 /* header */
-
-.nav-link{
-    color: black;
-}
-.nav-container{
-    height: 75px;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--color-primary); 
-    position: fixed;
-    
-
-}
-.header-container .logo, .navbar{
-    color: black
-}
 
 ul{
     display: flex;
@@ -75,128 +56,7 @@ li, a:hover{
 
 
 
-/* HERO SECTION */
-.home{
-    height: 100vh
-}
-
-.hero{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: ;
-    height: 100vh;
-    background-color:var(--color-secondery);
-    width: 100vw
-}
-.hero .hero-text .pre-text, .text:hover{
-    cursor:default;
-}
-
-.hero .hero-image{
-    margin-right: 50px
-}
-
-.hero-text{ 
-    align-items: center;
-    margin-left:50
-}
-
-
-.text{ 
-    font-size: 35;
-    margin-bottom: 5px; 
-    
-}
-
-.pre-text{
-    margin-bottom: 5px; 
-    font-size: 16px;
-}
-
-.post-text{
-    font-size: 21;
-    margin-bottom: 5px; 
-}
-.sub{
-    padding: 13px 22px;
-    background-color: var(--color-primary);
-    font-size: 15;
-    border-radius: 10px ;
-    border-color: var(--color-primary);
-    transition: 1s;
-     
-}
-.sub:hover{
-    background: #081c15;
-    letter-spacing: 0.02cm;
-    color: var(--color-primary);
-    transition: 0.8s;
-    cursor: pointer;
-    box-shadow: 0 0 15px white;
-    margin-bottom: 30px;
-    margin-left:15px
-}
-
 /* HERO SECTION END */
-
-
-/* ABOUT SECTION */
-
-.about{
-    background-color:var();
-    width: 100vw;
-    height: 500px;
-}
-
-.title{
-    text-align: center;
-    color: black;
-    margin-top: 40px;
-    font-size: 50;
-}
-
-.about-body{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 15px;
-}
-.description{
-    font-size: 17;
-    letter-spacing: 0.03;
-    width: 30%
-}
-
-.description, .about-image{
-    color: black;
-}
-
-/* END OF ABOUT SECTION */
-
-
-/* DEVELOPERS SECTION */
-.developers{
-    height:100vh;
-    background-color: var(--color-secondery);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.developer-title{
-    color: white;
-    font-size: 50;
-    margin-top: 50px;
-    
-
-
-}
-
-.developers-description{
-    margin-top: 35px;
-    width: 450px
-}
 
 .cards-container{
     height:550px;
@@ -293,27 +153,14 @@ li, a:hover{
 
 
 
-/* login/register */
-.login-img{
-    width: 50%;
-    height: 100vh;
-}
+/* login/register */ 
 .login-page{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
-
-.login-form{
-    width: 50%;
-    height: 100vh; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.form-container{
-    width: auto;
+ 
+.form-container{ 
     height: auto;
     display: flex;
     flex-direction: column;
@@ -327,26 +174,40 @@ li, a:hover{
 .header{
     font-size: 25;
 }
-form{
-    display: flex;
-    flex-direction: column;
-}
-form p{
-    color: grey ; 
-}
 
-form input, p{
-    margin-top: 5;
+.rp{
+    color: rebeccapurple ; 
+}
+ 
+form input, p{ 
+    margin-top: 5px;
 
 }
 form input{
 
     border: unset;
     background-color: transparent;
-    border-bottom: 3px solid #cfab17;
-    width:  370px;
+    border-bottom: 3px solid #cfab17; 
+    width:  250px;
 
     
+}
+.login-section{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width: 620px){
+    .login-section{
+        flex-direction: column;
+    }
+}
+.auth-form p{
+    margin-bottom: -5;
+    width:300
 }
 
 .auth-submit{
@@ -366,6 +227,27 @@ form input{
 
 /* work-form page */
 
+.custom-bg{
+    background-color: rgb(46, 45, 45);
+}
+
+.custom-width {
+    width: 240px; /* Set your desired custom width */
+    margin: 0 auto; /* Center the element */
+  }
+
+  @media (min-width: 576px) {
+    .custom-width {
+      width: 280px; /* Set your desired custom width for medium screens */
+    }
+  }
+
+  /* Custom width for large screens */
+  @media (min-width: 992px) {
+    .custom-width {
+      width: 390; /* Set your desired custom width for large screens */
+    }
+  }
 .work-page-form{
     height: 100vh;
     width: 100vw;
@@ -405,4 +287,8 @@ form input{
 .form-link{
     color: black;
     font-size: 20;
+}
+
+textarea{
+    width: 100%
 }

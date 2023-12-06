@@ -2,48 +2,60 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="C:\Users\Abdulhamid\Desktop\Xenux\static\css\main.css" rel="stylesheet">
+    <link href="" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mozzie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 </head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 <body>
 <main>
     <!-- NAVBAR SECTION -->
-    <div class="nav-container">
-        <div class="logo">Xenux</div>
-            <ul>
-                <li><a href="#" class="nav-link">About</a></li>
-                <li><a href="#" class="nav-link">Developers</a></li>
-                <li><a href="#" class="nav-link">Contacts</a></li>
-            </ul>
-            <button class="login-register">Login</button>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+        <div class="container">
+            
+            <a href="" class="navbar-brand "><h3>Xenux</h3></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"><span class="navbar-toggler-icon"></span></button>
+    
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="" class="nav-link">sdsd</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">1saa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">ssas</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
     <!-- END OF NAVBAR SECTION -->
 
     <!-- HERO SECTION -->
-    <section class="hero">
-            <div class="hero-text">
-                <div class="pre-text">Need A Resume?</div>
-                <div >
-                    <h1 class="text">Use Xenux
-                    </h1>
-                    <div class="post-text">Create An ATS Compatible Resume Within Minutes Hassle Free!</h5>
-                </div>
-                <button type="button" class="sub">Create One Now!</button>
-            </div> 
+
+    <section id="hero" class=" d-flex align-items-center h-100 hero bg-dark text-light fixed p-5 text-center text-sm-center mb-10">
+        <div class="container">
+            <div>
+                <div>
+                    <div class="pre-text">Need A Resume?</div><div >
+                        <h1 class="text">Use <span class="text-info">Xenux</span>
+                        </h1>
+                        <h5 class="lead m-3 animate__animated animate__fadeInRight" data-delay="500">Create An ATS Compatible Resume Within Minutes Hassle Free!</h5>
+                        <button class="btn btn-info btn-lg">Start Now</button>
+                    </div>
+        </div>
     </section>
+    <section class="custom-bg  text-light text-center ">
+        <h1 class="">About Xenux </h1>
 
-
-    <!-- END OF HERO SECTION -->
-
-
-    <!-- ABOUT SECTION -->
-    <section class="about">
-        <h1 class="title">About Xenux </h1>
-
-        <div class="about-body">
-            <p class="description">
+        <div class="container  d-flex flex-column-reverse flex-md-row text-center justify-content-center h-75 align-items-center ">
+            <p class="description w-50 custom-primary ">
                 Writing you resume is hard, typing one that's ATS compatible? Even harder. But worry not, because that's what im here to solve
                 <br>
                 <br>
@@ -54,6 +66,17 @@
                 <br>
                 (Full Meaning Of ATS) is a software built specifically to scan through your resume. more info on ats needed here. must browse
             </p>
+            ssdw
+        </div>
+
+    </section>
+
+
+    <!-- END OF HERO SECTION -->
+
+
+    <!-- ABOUT SECTION -->
+    <section class="about">
             <div class="about-image">Image should be here</div>
         </div>
 
@@ -69,33 +92,12 @@
        <!-- Still cond=sidering adding this....
         <p class="developers-description">This Web Application was developed By M.I.S and Hamid as a project to work on during the break. Their details are indicated below</p>
        --> 
-        <div class="cards-container">
-            <div class="card">
-                <p class="card-image">Dev image(could be a logo :/)</p>
-                <div class="card-name">M.I.S</div>
-                <div class="card-role">Frontend Developer</div>
-                <br>
-                <div class="card-links">
-                    <p>Contacts: </p>
-                    <a href="#"><i class="fa-brands fa-github"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
+       <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap">
+            <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
-            
-            <div class="card">
-                <div class="card-image">Dev image(could be a logo :/)</div>
-                <div class="card-name">Hamid</div>
-                <div class="card-role">Backend Develoer </div>
-                <br>
-                <div class="card-links">
-                    <p>Contacts: </p>
-                    <a href="#"><i class="fa-brands fa-github"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-            </div>
-        </div>
+      </div>
 
     </section>
 
@@ -113,5 +115,13 @@
 
 
 </main>
+<script>
+    // Add the 'show' class after a delay to trigger the fade-in animation
+    document.addEventListener('DOMContentLoaded', function () {
+      setTimeout(function () {
+        document.querySelector('#hero').classList.add('show');
+      }, 500); // Adjust the delay time as needed
+    });
+  </script>
 </body>
 </html>

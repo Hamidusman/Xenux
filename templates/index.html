@@ -1,0 +1,100 @@
+
+{% extends 'base.html '%}
+#{% load static %}
+
+{% block content %} 
+
+    <!-- END OF NAVBAR SECTION -->
+
+    <!-- HERO SECTION -->
+    <section id="hero" class=" d-flex align-items-center h-100 hero bg-dark text-light fixed p-5 text-leftr text-md-center mb-10">
+        <div class="container">
+            <div class="d-flex flex-column-reverse flex-md-row justify-content-around align-items-center">
+                <div>
+                    <div class="pre-text">Are you tired of the resume hassle?</div>
+                    <div >
+                        <h1 class="text">Introducing <span class="text-info">Xenex</span>
+                        </h1>
+                        <h5 class="lead mt-2 animate__animated animate__fadeInRight" data-delay="500">Create a hassle-free ATS compliant resume within minutes!</h5>
+                        <button class="btn btn-info btn-lg">Start Now</button>
+                    </div>
+                </div>
+                <img src="{% static 'img\undraw_online_cv_re_gn0a.svg' %}" class="custom-width pb-5">
+            </div>
+    </section>
+
+
+    <!-- END OF HERO SECTION -->
+
+
+    <!-- ABOUT SECTION -->    
+    <section class="custom-bg  text-light text-center ">
+        <h1 class="">About Xenux </h1>
+
+        <div class="container  d-flex flex-column-reverse flex-md-row text-start justify-content-around font-25  pb-10 align-items-center ">
+            <p class="description w-50  custom-primary ">
+                Writing you resume is hard, typing one that's ATS compatible? Even harder. But worry not, because that's what im here to solve
+                <br>
+                <br>
+                Xenux is a simple but efficient resume builder designed to support job candidates with a resume that would bypass that pesky ATS software when applying for jobs online.
+                <br>
+                <br>
+                But What Is ATS?
+                <br>
+                Application Tracking Software is a software application used by employers to manage the hiring process, especially in the initial stages of recruitment. The primary purpose of an ATS is to automate and streamline the sorting, scanning, and handling of job applications.
+            </p>
+            <img src="{% static 'img\461-4616980_fuze-rainbow-six-siege-mmd-transparent-png-png.png' %}" class="custom-width py-3">
+        </div>
+
+    </section>
+    
+    <!-- END OF ABOUT SECTION -->
+
+    <!-- DEVELOPERS SECTION -->
+    <section class="developers">
+        <div class="developer-title">The Developers</div>
+       <!-- Still cond=sidering adding this....
+        <p class="developers-description">This Web Application was developed By M.I.S and Hamid as a project to work on during the break. Their details are indicated below</p>
+       --> 
+        <div class="cards-container">
+            <div class="card">
+                <p class="card-image">Dev image(could be a logo :/)</p>
+                <div class="card-name">M.I.S</div>
+                <div class="card-role">Frontend Developer</div>
+                <br>
+                <div class="card-links">
+                    <p>Contacts: </p>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-image">Dev image(could be a logo :/)</div>
+                <div class="card-name">Hamid</div>
+                <div class="card-role">Backend Develoer </div>
+                <br>
+                <div class="card-links">
+                    <p>Contacts: </p>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- END OF DEVELOPERS SECTION -->
+    <section class="footer">
+
+    </section>
+{% endblock%}
+    <!-- FOOTER -->
+
+    
+    <!-- END OF FOOTER -->
+
+        
+
