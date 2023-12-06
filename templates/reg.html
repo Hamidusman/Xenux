@@ -5,11 +5,10 @@
 {% block content %}
        
 
-        <section class="login-section"> 
-            <img class="w-25 py-3" src="{% static 'img\undraw_job_offers_re_634p (1).svg' %}" alt="">    
+        <section class="login-section">
             <form class="auth-form" action="" method="post">
                 {% csrf_token %}
-                <h1>Sign Up</h1>
+                <h2 class="py-5">Sign Up</h2>
                 <p>First Name</p>
                 <input type="text" class="form-control" name="firstname" placeholder="Abdulhamid">
                 <p>Middle Name</p>

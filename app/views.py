@@ -55,3 +55,6 @@ def register(request):
     else:
         # Handle GET requests for the registration page
         return render(request, 'reg.html')  # Assuming 'registration.html' is your registration template
+
+def experience(request):
+    return render(request, 'work.html')
