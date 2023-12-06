@@ -8,13 +8,14 @@
         <section class="login-section"> 
             <img class="w-25 py-3" src="{% static 'img\undraw_job_offers_re_634p (1).svg' %}" alt="">    
             <form class="auth-form" action="" method="post">
+                {% csrf_token %}
                 <h1>Sign Up</h1>
                 <p>First Name</p>
-                <input type="text" class="form-control" id="first-name" name="first-name" placeholder="Abdulhamid">
+                <input type="text" class="form-control" name="firstname" placeholder="Abdulhamid">
                 <p>Middle Name</p>
-                <input type="text" class="form-control" id="first-name" name="first-name" placeholder="Omeiza">
+                <input type="text" class="form-control"  name="middlename" placeholder="Omeiza">
                 <p>Surname</p>
-                <input type="text" class="form-control" name="surname" id="" placeholder="Usman">
+                <input type="text" class="form-control" name="surname" placeholder="Usman">
                 <p>Email</p>
                 <input type="email" class="form-control" name="email" id="" placeholder="hamidusman@gmail.com">
                 <p>Password</p>
