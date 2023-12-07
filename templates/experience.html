@@ -1,0 +1,73 @@
+
+{% extends 'base.html '%}
+{% load static %}
+
+{% block content %}
+
+    <section class="work-page-form">
+            <div class="form-frame">
+
+                    <h2 class="heading text-center">Work Experience</h2>
+                <form action="" method="post">
+                    {% for message in messages %}
+                    {{message}}
+                    {% endfor %}
+                    {% csrf_token%}
+
+                    <p class="mt-">Position held</p>
+                    <input type="text" class="form-control" name="position" id="" placeholder="Daedric Prince of War">
+                    <p class="mt-">Organization</p>
+                    <input type="text" class="form-control" name="organization" id="" placeholder="Shivering Isle">
+                    <p class="mt-">Duration</p>
+                    <input type="text"  class="form-control" name="duration"  placeholder="Oblivion Crisis">
+
+                    <p class="mt-">Description</p>
+                    <input type="text"  class="form-control" name="description" id="" placeholder="Conquered the mortal world">
+
+                    <button type="submit"  class="auth-submit btn btn-info btn-md mt-3 w-100">Add</button>
+                </form>
+
+
+            </div>
+
+    </section>
+
+{% endblock %}
+
+
+<img class="w-25 py-3" src="{% static 'img\undraw_job_offers_re_634p (1).svg' %}" alt="">    
+<form class="auth-form" action="" method="post">
+    {% csrf_token %}
+    <h1>Sign Up</h1>
+    <p>Email</p>
+    <input type="email" class="form-control" name="email" id="" placeholder="hamidusman@gmail.com">
+    <p>Password</p>
+    <input type="password" class="form-control" name="password" id="" placeholder="peepship">
+    
+    <button type="submit" class="btn btn-info btn-md mt-3">Submit</button>
+</form>
+
+
+        
+<div class="track">
+    <a class="form-link" href="">
+            
+        <div class="phase">
+            <div class="icon"><i class="fa-solid fa-briefcase"></i></div>
+            <h4 class="icon-title">work</h4>
+        
+        </div>
+    </a>
+    <a class="form-link" href="">
+        <div class="phase">
+            <div class="icon"><i class="fa-solid fa-person-hiking"></i></i></div>
+            <h4 class="icon-title">Education</h4>
+        </div>
+    </a>
+    <a class="form-link" href="">
+        <div class="phase">
+            <div class="icon"><i class="fa-solid fa-star"></i></div>
+            <h4 class="icon-title">Skill</h4>
+        </div>
+    </a> 
+</section>
