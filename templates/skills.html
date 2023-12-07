@@ -1,0 +1,32 @@
+
+{% extends 'base.html '%}
+{% load static %}
+
+{% block content %}
+
+<section class="work-page-form">
+    <div class="form-frame">
+
+        <h2 class="heading text-center">Skills</h2>
+        <form action="" method="post">
+            {% for message in messages %}
+            {{message}}
+            {% endfor %}
+            {% csrf_token%}
+
+            <p class="mt-">Skill-1</p>
+            <input type="text" class="form-control" name="skill1" id="" placeholder="Web scraping">
+            <p class="mt-">Skill-2</p>
+            <input type="text" class="form-control" name="skill2" id="" placeholder="Python">
+            <p class="mt-">Skill-3</p>
+            <input type="text"  class="form-control" name="skill3"  placeholder="Backend Development">
+
+            <button type="submit"  class="auth-submit btn btn-info btn-md mt-3 w-100">Add</button>
+        </form>
+
+
+    </div>
+</section>
+
+
+    {% endblock %}

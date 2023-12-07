@@ -21,23 +21,9 @@ main{
     --color-secondery: #eaf0f6;
   }
 /* header */
-
-ul{
-    display: flex;
-    flex-direction: row;
-    margin-right: 20px
+.nav-color{
+    color: red
 }
-
-.logo{
-    margin-left: 25px;
-    font-size: 30px;
-}
-li{
-    margin: 15px;
-    list-style: none;
-    font-size: 18;
-}
- 
 
 
 .login-register{

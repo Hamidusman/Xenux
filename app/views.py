@@ -2,7 +2,7 @@
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
-from .models import Education, Experience
+from .models import Education, Experience, Skill
 from django.contrib import messages
 # Create your views here.
 
@@ -98,3 +98,21 @@ def experience(request):
             messages.info(request, f'request failed {e}')
     context = {'experience': experience}
     return render(request, 'experience.html', context)
+
+
+def skills(request):
+    skills = Skill.objects.filter(owner= request.user)
+    if request.method == 'POST':
+        skill1 = request.POST['skill1']
+        skill2 = request.POST['skill2']
+        skill3 = request.POST['skill3']
+
+        try:
+            Skill.objects.create(owner=request.user, skill1=skill1, skill2=skill2, skill3=skill3)
+            messages.info(request, 'Skills updated successfully')
+
+        except Exception as e:
+            messages.info(request, f'an error occured, {e}')
+
+
+    return render(request, 'skills.html')

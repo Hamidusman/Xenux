@@ -22,3 +22,12 @@ class Experience(models.Model):
 
     def __str__(self):
         return self.position
+
+class Skill(models.Model):
+    skill1 = models.CharField(max_length=30, default='')
+    skill2 = models.CharField(max_length=30, default='')
+    skill3 = models.CharField(max_length=30, default='')
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return 'Skillsets'
