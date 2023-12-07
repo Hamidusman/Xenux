@@ -2,13 +2,14 @@
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
+from .models import Education, Experience
 from django.contrib import messages
 # Create your views here.
 
 def index(request):
     return render(request, 'index.html')
 
-def login_v(request):
+def login(request):
     if request.method == 'POST':
         email = request.POST['email']
         password = request.POST['password']
@@ -58,3 +59,42 @@ def register(request):
 
 def experience(request):
     return render(request, 'work.html')
+
+    
+def education(request):
+    education = Education.objects.filter(owner=request.user)
+    
+    if request.method == 'POST':
+        certification = request.POST['degree']
+        institution = request.POST['institution']
+        duration = request.POST['duration']
+        description = request.POST['description']
+
+        # Use try-except block to catch any potential exceptions during object creation
+        try:
+            Education.objects.create(owner=request.user, certification=certification, institution=institution, duration=duration, description=description)
+            messages.info(request, 'Education record saved!')  # Pass the request object to the messages.info function
+        except Exception as e:
+            messages.error(request, f'Error saving education record: {e}')  # Handle any exceptions and display an error message
+
+    return render(request, 'education.html', {'education': education})
+
+def experience(request):
+    experience = Experience.objects.filter(owner = request.user)
+    if request.method == 'POST':
+        position = request.POST['position']
+        organization = request.POST['organization']
+        duration = request.POST['duration']
+        description = request.POST['description']
+
+        try:
+            Experience.objects.create(owner=request.user,
+                                      position=position,
+                                      organization=organization,
+                                      duration=duration,
+                                      description=description)
+            messages.info(request, 'Experience saved!')
+        except Exception as e:
+            messages.info(request, f'request failed {e}')
+    context = {'experience': experience}
+    return render(request, 'experience.html', context)

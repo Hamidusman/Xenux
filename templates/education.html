@@ -1,47 +1,33 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="C:\Users\Abdulhamid\Desktop\Xenux\static\css\main.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mozzie</title>
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-</head>
-<body> 
-    <div class="nav-container">
-        <div class="logo">Xenux</div>
-            <ul>
-                <li><a href="#" class="nav-link">About</a></li>
-                <li><a href="#" class="nav-link">Developers</a></li>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section class="work-page-form">
+        <div class="form-frame">
+                
+                <h2 class="heading text-center">Education</h2> 
+            <form action="" method="post">
+                {% csrf_token %}
+                {% for message in messages %}
+                {{message}}
+                {% endfor %}
 
-                <li><a href="#" class="nav-link">Contacts</a></li>
-            </ul>
-    </div>
-
-    <main>
-        <div class="work-page-form">
-            <div class="output">Input displayed here</div>
-            <div class="form-frame">
-                <div class="heading">
-                    
-                    <h2>Work Experience</h2>
-                    <h5>Please state relevant work experience with the form below</h5>
-                </div>
-                <form action="" method="post">
-                    <p>Institution</p>
-                    <input type="text" name="position" id="">
-                    <p>Certificate</p>
-                    <input type="text" name="organization" id=""> 
-                    <p>Duration</p>
-                    <input type="number" name="duration" id=""> 
-                     
-                    <p>Description</p>
-                    <textarea name="description" id="" cols="30" rows="10"></textarea>
-                    <button type="submit" class="auth-submit">Add</button>
-                </form>
+                
+                <p class="mt-1">Degree</p>
+                <input type="number" class="form-control" name="degree" id="" placeholder="Genetic">
+                <p class="mt-1">University</p>
+                <input type="text" class="form-control" name="institution" id="" placeholder="MIT, Nigeria">
+                <p class="mt-1">Duration</p>
+                <input type="text"  class="form-control" name="duration"  placeholder="Jan 2022 - Sep 2028"> 
+                <p class="mt-1">Description</p>
+                <input type="text"  class="form-control" name="description" id="" placeholder="Conquered the mortal world">  
+                
+                <button type="submit"  class="auth-submit btn btn-info btn-md mt-3 w-100">Add</button>
+            </form>
 
 
-            </div>
+        </div>
+
+{% endblock %}
             
 
         
