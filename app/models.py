@@ -8,7 +8,7 @@ class Profile(models.Model):
     address = models.CharField(max_length=150)
     occupation = models.CharField(max_length=50)
     phone_number = models.IntegerField(max_length=20)
-    about = models.TextField(max_length=150)
+    about = models.TextField(max_length=150, default= 'I ')
 
     def __str__(self):
         return self.owner.username
