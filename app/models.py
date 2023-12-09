@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Profile(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
     age = models.CharField(max_length=3)
     address = models.CharField(max_length=150)
     occupation = models.CharField(max_length=50)

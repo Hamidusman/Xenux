@@ -2,7 +2,7 @@
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as auth_login
 from django.shortcuts import render, redirect
-from .models import Education, Experience, Skill
+from .models import Education, Experience, Skill, Profile
 from django.contrib import messages
 # Create your views here.
 
@@ -61,10 +61,25 @@ def register(request):
         # Handle GET requests for the registration page
         return render(request, 'reg.html')  # Assuming 'registration.html' is your registration template
 
-def experience(request):
-    return render(request, 'work.html')
+def profie(request):
+    user_info = Profile.objects.get(owner=request.user)
+    if request.method = 'POST':
+        age = requests.POST['age']
+        address = request.POST['address']
+        occupation = request.POST['occupation']
+        phone_number = request.POST['phone_number']
+        about = request.POST['about']
 
-    
+        user_info.age = age
+        user_info.address = address
+        user_info.occupation = occupation
+        user_info.phone_number = phone_number
+        user_info.about = about
+        user_info.save()
+        return redirect('/')
+    return render(request, 'profile.html')
+
+
 def education(request):
     education = Education.objects.filter(owner=request.user)
     
