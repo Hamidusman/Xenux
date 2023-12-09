@@ -14,13 +14,13 @@
         <!-- NAVBAR SECTION -->
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
             <div class="container">
-                
+                 
                 <a href="" class="navbar-brand "><h1>Xenex</h1></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navmenu">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a href="" class="nav-link">Home</a>
+                            <a href="{% url 'index' %}" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
                             <a href="" class="nav-link">About</a>
@@ -29,17 +29,26 @@
                             <a href="" class="nav-link">Developer</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">Your Education</a>
+                            <a href="{% url 'education' %}" class="nav-link">Your Education</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">Your Experience</a>
+                            <a href="{% url 'experience' %}" class="nav-link">Your Experience</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">Your Skills</a>
+                            <a href="{% url 'index' %}" class="nav-link">Your Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">Your Resume</a>
+                            <a href="{% url 'index' %}" class="nav-link">Your Resume</a>
                         </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a href="{% url 'index' %}" class="nav-link">Logout</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a href="{% url 'index' %}" class="nav-link">Login</a>
+                        </li>
+                        {% endif %}
 
                         
                     </ul>

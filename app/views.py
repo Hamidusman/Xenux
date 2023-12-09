@@ -1,12 +1,12 @@
 
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login as auth_login
 from django.shortcuts import render, redirect
 from .models import Education, Experience, Skill
 from django.contrib import messages
 # Create your views here.
 
-def index(request):
+def index(request):  
     return render(request, 'index.html')
 
 def login(request):
@@ -17,7 +17,8 @@ def login(request):
         user = authenticate(request, username=email, password=password)
 
         if user is not None:
-            login(request, user)  # Corrected this line
+            auth_login(request, user)
+            messages.success(request, 'Login successful')
             return redirect('/')
         else:
             messages.error(request, 'Incorrect email/password')
@@ -41,15 +42,18 @@ def register(request):
             else:
                 # Create and save the user
                 user = User.objects.create_user(
-                        username=email,
-                        email=email,
-                        password=password
-                    )
-                user.first_name = firstname
-                user.middle_name = middlename
-                user.last_name = surname
+                    username=email,
+                    email=email,
+                    password=password
+                )
+                user.firstname = firstname
+                user.middlename = middlename
+                user.surname = surname
                 user.save()
-                return redirect('/')
+
+                # Pass the email to the template
+
+                return redirect('login')
         else:
             messages.info(request, "Passwords don't match")
             return redirect('reg')
@@ -116,3 +120,17 @@ def skills(request):
 
 
     return render(request, 'skills.html')
+
+
+def resume(request):
+    experience = Experience.objects.filter(owner=request.user)
+    education = Education.objects.filter(owner = request.user)
+    skills = Skill.objects.filter(owner=request.user)
+    firstname = request.user.first_name
+    context = {
+    'experience': experience,
+    'education': education,
+    'skills': skills,
+    'user': request.user,  # Include the user variable in the context
+}
+    return render(request, 'resume.html', context)

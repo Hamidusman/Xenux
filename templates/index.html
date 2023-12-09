@@ -10,13 +10,10 @@
     <section id="hero" class=" d-flex align-items-center h-100 hero bg-dark text-light fixed p-5 text-leftr text-md-center mb-10">
         <div class="container">
             <div class="d-flex flex-column-reverse flex-md-row justify-content-around align-items-center">
-                <div>
-                    <h3>Welcome {% if user.is_authenticated %}
+                <div> 
                         
-                        {{ user.first_name }}
-                        
-                        {% else%}Guest!{%endif%}</h3>
-                    <div class="pre-text">Need a quick resume?</div>
+                    <div class="pre-text">Need a quick resume?
+                        {{ user. }}</div>
                     <div >
                         <h1 class="text">Use <span class="text-info">Xenex</span>
                         </h1>

@@ -1,0 +1,6 @@
+<!-- resume.html -->
+{% if user.is_authenticated %}
+    <h2>Welcome, {{ user.first_name }}!</h2>
+{% else %}
+    <p>You are not logged in.</p>
+{% endif %}
